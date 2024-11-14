@@ -140,7 +140,6 @@ const useBlogCalls = () => {
       toastSuccessNotify("Yorumunuz başarıyla eklendi.");
       getSingleBlog(id);
     } catch (error) {
-      console.log(error);
       toastErrorNotify("Yorumunuz eklenemedi.");
     }
   };

@@ -24,7 +24,7 @@ const Detail = () => {
   const { getSingleBlog, getComments, getLikes, postLike, deleteBlog } =
     useBlogCalls();
   const { singleblog, likes, loading } = useSelector((state) => state.blog);
-  const { id } = useParams(); // URL'den id parametresini alıyoruz
+  const { id } = useParams(); 
   const [showComments, setShowComments] = useState(false);
 
   //!MODAL YAPISI
@@ -55,11 +55,9 @@ const Detail = () => {
   };
   const handleLike = () => {
     if (likes.didUserLike) {
-      // Beğeni kaldır
-      postLike(id); // Beğeni eklemek için gerekli aksiyonu çağır
+      postLike(id); 
     } else {
-      // Beğeni ekle
-      postLike(id); // Beğeni kaldırmak için gerekli aksiyonu çağır
+      postLike(id);
     }
   };
 
@@ -68,8 +66,6 @@ const Detail = () => {
     getComments();
     getLikes(id);
   }, [id]);
-
-  // Tarih formatlama
   const isoDate = singleblog.createdAt;
   const dateObj = new Date(isoDate);
   const formattedDate = dateObj.toLocaleDateString();

@@ -15,7 +15,6 @@ export const authSlice = createSlice({
       state.username = payload.user.username;
       state.userInfo = payload.user;
       state.id = payload.user._id;
-      console.log(payload);
     },
     registerSuccess: (state, { payload }) => {
       state.token = payload.token;

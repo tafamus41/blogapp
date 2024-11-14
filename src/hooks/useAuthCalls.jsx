@@ -18,11 +18,10 @@ const useAuthCalls = () => {
         userData
       );
       dispatch(loginSuccess(data));
-      toastSuccessNotify("Tebrikler bütün bilgileriniz çalınmıştır :))))");
+      toastSuccessNotify("Login işlemi başarılı");
       navigate(-1);
     } catch (error) {
       toastErrorNotify("Login işlemi başarısız.");
-      console.log(error);
     }
   };
   const logout = async () => {
@@ -32,7 +31,6 @@ const useAuthCalls = () => {
       toastSuccessNotify("Logout işlemi başarılı.");
       navigate("/");
     } catch (error) {
-      console.log("çıkılamadı");
       toastErrorNotify("Logout işlemi başarısız.");
     }
   };
@@ -47,7 +45,6 @@ const useAuthCalls = () => {
       navigate("/");
     } catch (error) {
       toastErrorNotify("Register işlemi başarısız.");
-      console.log(error);
     }
   };
 
