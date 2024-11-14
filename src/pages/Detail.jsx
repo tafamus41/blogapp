@@ -24,7 +24,7 @@ const Detail = () => {
   const { getSingleBlog, getComments, getLikes, postLike, deleteBlog } =
     useBlogCalls();
   const { singleblog, likes, loading } = useSelector((state) => state.blog);
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [showComments, setShowComments] = useState(false);
 
   //!MODAL YAPISI
@@ -55,7 +55,7 @@ const Detail = () => {
   };
   const handleLike = () => {
     if (likes.didUserLike) {
-      postLike(id); 
+      postLike(id);
     } else {
       postLike(id);
     }
