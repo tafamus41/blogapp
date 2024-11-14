@@ -22,11 +22,11 @@ const FooTer = () => {
         }}
       >
         <Typography variant="body1">
-          Developed by some Fullstack Developers
+          Developed by tafamus41
         </Typography>
 
         <Typography variant="body1">
-          Copyright &copy; {new Date().getFullYear()} nightBirds.co
+          Copyright &copy; {new Date().getFullYear()} 
         </Typography>
       </Box>
     </Box>
